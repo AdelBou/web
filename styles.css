@@ -1,0 +1,43 @@
+@font-face {
+    font-family: OggRoman;
+    src: url("fonts/Ogg-Roman.otf") format("opentype");
+}
+@font-face {
+    font-family: OggItalic;
+    src: url("fonts/Ogg-Italic.otf") format("opentype");
+}
+
+body{
+  display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-gap: 10px;
+grid-auto-rows: minmax(100px, auto);
+height: 100vh;
+}
+
+.noise{
+background-color: #ffffff;
+background-image: linear-gradient(0deg, #ffffff 0%, #16A085 100%);
+}
+
+.hide {
+  display: none;
+}
+
+li{
+  font-family: OggItalic;
+  src: url("fonts/Ogg-Italic.otf") format("opentype");
+  grid-column: 1;
+}
+
+.content{
+  font-family: OggRoman;
+  src: url("fonts/Ogg-Roman.otf") format("opentype");
+  color:grey;
+  grid-column: 2;
+}
+
+.title:hover + .hide {
+  display: block;
+  color:red;
+}
